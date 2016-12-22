@@ -1,0 +1,73 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[bookmarks]{hyperref}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{lipsum} 
+\usepackage[justification=centering]{caption}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+
+%Each Section in a new Page
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+
+%Set space around and between lists
+\setlist[enumerate]{noitemsep, topsep=0cm}
+\setlist[itemize]{noitemsep, topsep=0cm}
+
+%Figure/Table Numbering style "Section Number.figure counter
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+
+%Reset figure/table counter after section change
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+%Set Paragraph indent to null
+\setlength{\parindent}{0pt}
+% Smaler Table Space
+\renewcommand{\arraystretch}{1.5}
+
+\title{Projekttitel}
+\author{Vorname Nachname}
+\date{Datum}
+
+\begin{document}
+\pagenumbering{Roman} 
+
+%\includepdf{titlepage/titlepage}
+
+\input{presections/abstract}
+\newpage
+\input{presections/mgmtsummary}
+
+%\includepdf[pages={1-}, 
+%scale=0.9,pagecommand=\thispagestyle{plain}]{additionals/eigenstaendigkeit}
+%\includepdf[pages={1-2}, 
+%scale=0.9,pagecommand=\thispagestyle{plain}]{additionals/aufgabenstellung}
+
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\input{sections/analyse}
+\input{sections/projektmgmt}
+\input{sections/konzeption}
+\input{sections/ergebnisse}
+\input{sections/ausblick}
+
+\appendix
+
+\listoffigures
+\addcontentsline{toc}{section}{\listfigurename}
+
+\listoftables
+\addcontentsline{toc}{section}{\listtablename}
+
+\input{sections/anhang}
+\end{document}
