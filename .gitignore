@@ -1,3 +1,6 @@
+## Your own Files you want to exclude
+main.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
