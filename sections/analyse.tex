@@ -1,2 +1,58 @@
-\section{Analyse}
-[Placeholder]
+\section{Examples}
+
+\paragraph{Paragraph Title}
+Blaa blaablaaaaa
+
+\subsection{Lists}
+
+\subsubsection{Bulletpoint}
+
+\begin{itemize}
+	\item Bullet Point
+	\item Bullet Point
+\end{itemize}
+
+\subsubsection{Enumeration}
+\begin{enumerate}
+	\item Enumerate Point
+	\item Enumerate Point
+\end{enumerate}
+
+\subsection{Tables}
+
+\begin{table}[H]
+	\begin{tabular}{l | c | r | p{0.2\textwidth}}
+		\textbf{Left Align} & \textbf{Center Align} & \textbf{Right Align} & 
+		\textbf{Fixed witdh}\\ \hline
+		Bli & Bla & Blubb & testtest\\ 		
+	\end{tabular}
+	\caption{Table Title}
+	\label{tab:Sample Table}
+\end{table}
+
+\subsection{Image}
+\subsubsection{Centered Image}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/sample}
+	\caption{Sample Image}
+	\label{fig:Sample Image}
+\end{figure}
+
+\subsubsection{Image \& Text}
+\begin{figure}[H]
+	\begin{minipage}{0.55\textwidth}
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+		nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+		sed diam voluptua. At vero eos et accusam et\\
+		
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+		nonumy eirmod tempor invidunt ut.\\
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{img/meow}
+		\caption[Title with special Characters]{Short Title}
+		\label{fig:Image and Text}
+	\end{minipage}
+\end{figure}
